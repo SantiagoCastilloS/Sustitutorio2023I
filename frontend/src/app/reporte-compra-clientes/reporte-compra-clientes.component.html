@@ -1,0 +1,59 @@
+<div>
+  <h1 style="align-content: center">REPORTE DE COMPRA DE CLIENTES</h1>
+</div>
+<table>
+  <tr>
+    <th>DNI</th>
+    <th> | </th>
+    <th>NOMBRE COMPLETO</th>
+    <th> | </th>
+    <th>PRECIO FINAL</th>
+    <th> | </th>
+    <th>CANTIDAD</th>
+    <th> | </th>
+    <th>FECHA COMPRA</th>
+    <th> | </th>
+    <th>FORMA PAGO</th>
+    <th> | </th>
+    <th>ESTADO</th>
+    <th> | </th>
+    <th>CODIGO</th>
+    <th> | </th>
+    <th>PORCENTAJE DSCTO</th>
+    <th> | </th>
+    <th>VENCIMIENTO</th>
+    <th> | </th>
+    <th>PRECIO VENTA</th>
+    <th> | </th>
+    <th>RUC</th>
+    <th> | </th>
+    <th>RAZON SOCIAL</th>
+  </tr>
+  <tr *ngFor="let item of lista">
+    <td>{{item.dni}}</td>
+    <td> | </td>
+    <td>{{item.nombreCompleto}}</td>
+    <td> | </td>
+    <td>{{item.precioFinal}}</td>
+    <td> | </td>
+    <td>{{item.cantidad}}</td>
+    <td> | </td>
+    <td>{{item.fechaCompra}}</td>
+    <td> | </td>
+    <td>{{item.formaPago}}</td>
+    <td> | </td>
+    <td>{{item.estado}}</td>
+    <td> | </td>
+    <td>{{item.codigo}}</td>
+    <td> | </td>
+    <td>{{item.porcentajeDescuento}}</td>
+    <td> | </td>
+    <td>{{item.fechaVencimiento}}</td>
+    <td> | </td>
+    <td>{{item.precioVenta}}</td>
+    <td> | </td>
+    <td>{{item.ruc}}</td>
+    <td> | </td>
+    <td>{{item.razonSocial}}</td>
+  </tr>
+</table>

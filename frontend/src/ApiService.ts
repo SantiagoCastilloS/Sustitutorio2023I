@@ -1,7 +1,8 @@
 import {Injectable} from "@angular/core";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
-import {Equipo, RespuestaGoleadores, RespuestaGolesPartidos} from "./interfaces";
+import {Compra, Cupon, RespuestaCompraClientes} from "./interfaces";
+
 
 
 @Injectable({
@@ -26,8 +27,8 @@ export class ApiService {
   }
   constructor(private http: HttpClient) { }
 
-  reporteGolesPartidos(): Observable<RespuestaGolesPartidos> {
-    return this.http.post<RespuestaGolesPartidos>('http://localhost:8081/reporteGolesPartidos', null,
+  reporteCompraClientes(): Observable<RespuestaCompraClientes> {
+    return this.http.post<RespuestaCompraClientes>('http://localhost:8081/reporteCompraClientes', null,
       this.httpOptions)
       .pipe(
         retry(1),
@@ -35,17 +36,16 @@ export class ApiService {
       );
   }
 
-  reporteGoleadores(): Observable<RespuestaGoleadores> {
-    return this.http.post<RespuestaGoleadores>('http://localhost:8081/reporteGoleadores', null,
+  insertarCupon(data: Cupon): Observable<Cupon> {
+    return this.http.post<Cupon>('http://localhost:8081/insertarCupon', data,
       this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandl)
       );
   }
-
-  agregarEquipo(data: Equipo): Observable<Equipo> {
-    return this.http.post<Equipo>('http://localhost:8081/agregarEquipo', data,
+  actualizarCompra(data: Compra): Observable<Compra> {
+    return this.http.post<Compra>('http://localhost:8081/actualizarCompra', data,
       this.httpOptions)
       .pipe(
         retry(1),

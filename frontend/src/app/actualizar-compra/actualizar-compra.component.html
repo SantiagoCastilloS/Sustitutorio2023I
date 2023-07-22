@@ -1,0 +1,21 @@
+<div>
+  <h1 style="align-content: center"  >ACTUALIZAR COMPRA</h1>
+  <div>
+    <p>Estado</p>
+    <input type="Text" placeholder="Ingrese Estado" [(ngModel)]="compra.estado">
+  </div>
+  <div>
+    <p>Forma de Pago</p>
+    <input type="Text" placeholder="Ingrese Forma de Pago" [(ngModel)]="compra.formaPago">
+  </div>
+  <div>
+    <p>Codigo</p>
+    <input type="Text" placeholder="Ingrese Codigo" [(ngModel)]="compra.codigo">
+  </div>
+  <div>
+    <p>Dni</p>
+    <input type="Text" placeholder="Ingrese Dni" [(ngModel)]="compra.dni">
+  </div>
+  <br>
+  <button (click)="actualizar()">ACTUALIZAR</button>
+</div>

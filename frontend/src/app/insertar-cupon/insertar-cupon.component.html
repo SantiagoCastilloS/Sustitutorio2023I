@@ -1,0 +1,29 @@
+<div>
+  <h1 style="align-content: center"  >INSERTAR UN CUPON</h1>
+  <div>
+    <p> ID Cupon</p>
+    <input type="Text" placeholder="Ingrese ID Cupon" [(ngModel)]="data.idCupon">
+  </div>
+  <div>
+    <p>Codigo</p>
+    <input type="Text" placeholder="Ingrese Codigo" [(ngModel)]="data.codigo">
+  </div>
+  <div>
+    <p>Porcentaje Descuento</p>
+    <input type="Text" placeholder="Ingrese Porcentaje Descuento" [(ngModel)]="data.porcentajeDescuento">
+  </div>
+  <div>
+    <p>Fecha Vencimiento</p>
+    <input type="Text" placeholder="Ingrese Fecha Vencimiento" [(ngModel)]="data.fechaVencimiento">
+  </div>
+  <div>
+    <p>Hora Vencimiento</p>
+    <input type="Text" placeholder="Ingrese Hora Vencimiento" [(ngModel)]="data.horaVencimiento">
+  </div>
+  <div>
+    <p>Id Producto</p>
+    <input type="Text" placeholder="Ingrese Id Producto" [(ngModel)]="data.idProducto">
+  </div>
+  <br>
+  <button (click)="insertar()">INSERTAR</button>
+</div>

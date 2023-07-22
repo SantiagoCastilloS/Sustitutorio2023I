@@ -1,30 +1,35 @@
-export interface GolesPartidos{
-  idPartido: number;
-  equipoLocal: string;
-  equipoVisitante: string;
-  fecha: string;
-  hora: string;
-  autorGol: string;
-  minuto: number;
+export interface CompraClientes {
+  dni: string;
+  nombreCompleto: string;
+  precioFinal: number;
+  cantidad: number;
+  fechaCompra: string;
+  formaPago: string;
+  estado: string;
+  codigo: string;
+  porcentajeDescuento: number;
+  fechaVencimiento: string;
+  precioVenta: number;
+  ruc: string;
+  razonSocial: string;
+}
+export interface RespuestaCompraClientes {
+  compraClientes: CompraClientes[];
 }
 
-export interface RespuestaGolesPartidos{
-  golesPartidos: GolesPartidos[];
+export interface Cupon{
+  idCupon: number;
+  codigo: string;
+  porcentajeDescuento: number;
+  fechaVencimiento: string;
+  horaVencimiento: string;
+  idProducto: number;
 }
 
-export interface Goleadores{
-  idJugador: number;
-  nombres: string;
-  nombreEquipo: string;
-  goles: number;
-}
+export interface Compra {
+  estado: string ;
+  formaPago: string ;
+  codigo: string ;
+  dni: string ;
 
-export interface RespuestaGoleadores{
-  goleadores: Goleadores[];
-}
-
-export interface Equipo{
-  idEquipo: number;
-  nombre: string;
-  ciudad: string;
 }

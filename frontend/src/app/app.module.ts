@@ -5,10 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { ReporteCompraClientesComponent } from './reporte-compra-clientes/reporte-compra-clientes.component';
+import { InsertarCuponComponent } from './insertar-cupon/insertar-cupon.component';
+import { ActualizarCompraComponent } from './actualizar-compra/actualizar-compra.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReporteCompraClientesComponent,
+    InsertarCuponComponent,
+    ActualizarCompraComponent
   ],
   imports: [
     BrowserModule,
